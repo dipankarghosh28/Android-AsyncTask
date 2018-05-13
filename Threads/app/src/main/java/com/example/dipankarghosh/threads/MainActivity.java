@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText editText;
     TextView txtDisplay;
+    TextView txt2;
     private Button mButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton.setOnClickListener(this);
         editText = (EditText) findViewById(R.id.editText);
         txtDisplay = (TextView) findViewById(R.id.txtDisplay);
+        txt2 = (TextView) findViewById(R.id.txt2);
 
     }
 
@@ -96,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         protected void onProgressUpdate(Integer... values) {
             txtDisplay.setText(values[0] + " Files Processed. ");
+            txt2.setText("Inside OnProgress Currently ");
+
         }
 
         @Override
